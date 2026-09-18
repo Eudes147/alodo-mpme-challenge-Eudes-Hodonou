@@ -1,0 +1,165 @@
+{
+  "dimensions": [
+    {
+      "id": "finance",
+      "label": "Finance & Trésorerie",
+      "weight": 1.0
+    },
+    {
+      "id": "digitalisation",
+      "label": "Digitalisation & Cashless",
+      "weight": 1.0
+    },
+    {
+      "id": "operations",
+      "label": "Opérations & Organisation",
+      "weight": 1.0
+    },
+    {
+      "id": "financement",
+      "label": "Préparation au Financement",
+      "weight": 1.0
+    }
+  ],
+  "questions": [
+    {
+      "id": "fin_1",
+      "dimensionId": "finance",
+      "type": "single_choice",
+      "label": "Quel type de compte utilisez-vous principalement pour gérer les recettes et dépenses de votre entreprise ?",
+      "context": "Séparation des finances personnelles et professionnelles adaptées aux réalités locales.",
+      "options": [
+        { "id": "fin_1_opt_1", "label": "Compte personnel du dirigeant (gestion mélangée)", "score": 0 },
+        { "id": "fin_1_opt_2", "label": "Compte Mobile Money Personnel utilisé pour l'activité", "score": 30 },
+        { "id": "fin_1_opt_3", "label": "Compte Mobile Money Marchand / Pro (MoMo, Moov, Celtiis Cash) dédié", "score": 70 },
+        { "id": "fin_1_opt_4", "label": "Compte bancaire professionnel au nom de l'entreprise", "score": 100 }
+      ]
+    },
+    {
+      "id": "fin_2",
+      "dimensionId": "finance",
+      "type": "single_choice",
+      "label": "En cas d'arrêt total des ventes, pendant combien de temps votre trésorerie actuelle permet-elle de payer vos charges fixes (loyers, salaires, factures) ?",
+      "context": "Évaluation du fonds de roulement et de la résilience financière.",
+      "options": [
+        { "id": "fin_2_opt_1", "label": "Moins de 15 jours", "score": 0 },
+        { "id": "fin_2_opt_2", "label": "De 15 jours à 1 mois", "score": 35 },
+        { "id": "fin_2_opt_3", "label": "De 1 à 3 mois", "score": 70 },
+        { "id": "fin_2_opt_4", "label": "Plus de 3 mois", "score": 100 }
+      ]
+    },
+    {
+      "id": "fin_3",
+      "dimensionId": "finance",
+      "type": "likert_scale",
+      "label": "Sur une échelle de 1 à 5, évaluez la régularité de l'enregistrement de vos flux d'argent (entrées/sorties) et du calcul de votre marge nette.",
+      "context": "Niveau de maturité dans le suivi de caisse et de rentabilité.",
+      "minScale": 1,
+      "maxScale": 5,
+      "options": [
+        { "id": "fin_3_opt_1", "label": "1 - Pas de suivi / De mémoire", "score": 0, "value": 1 },
+        { "id": "fin_3_opt_2", "label": "2 - Suivi occasionnel sur papier", "score": 25, "value": 2 },
+        { "id": "fin_3_opt_3", "label": "3 - Suivi quotidien sur registre papier/cahier de caisse", "score": 50, "value": 3 },
+        { "id": "fin_3_opt_4", "label": "4 - Suivi quotidien sur tableur Excel / Google Sheets", "score": 80, "value": 4 },
+        { "id": "fin_3_opt_5", "label": "5 - Suivi automatisé via application de gestion ou logiciel comptable", "score": 100, "value": 5 }
+      ]
+    },
+
+    {
+      "id": "dig_1",
+      "dimensionId": "digitalisation",
+      "type": "multiple_choice",
+      "label": "Quels outils digitaux utilisez-vous activement pour promouvoir et vendre vos produits/services ?",
+      "context": "Cochez toutes les cases qui s'appliquent (Plafond à 100 points).",
+      "maxScore": 100,
+      "options": [
+        { "id": "dig_1_opt_none", "label": "Aucun outil digital (Ventes 100% en boutique/de gré à gré)", "score": 0, "isExclusive": true },
+        { "id": "dig_1_opt_social", "label": "Page Réseaux Sociaux (Facebook, TikTok, Instagram)", "score": 20 },
+        { "id": "dig_1_opt_wa", "label": "WhatsApp Business avec catalogue produits à jour", "score": 40 },
+        { "id": "dig_1_opt_crm", "label": "Outils de réponses automatiques / CRM léger", "score": 20 },
+        { "id": "dig_1_opt_web", "label": "Site Web e-commerce ou Application dédiée", "score": 30 }
+      ]
+    },
+    {
+      "id": "dig_2",
+      "dimensionId": "digitalisation",
+      "type": "single_choice",
+      "label": "Proposez-vous des modes de paiement digitaux locaux à votre clientèle ?",
+      "context": "Intégration des solutions de paiement marchand sans contact.",
+      "options": [
+        { "id": "dig_2_opt_1", "label": "Espèces (Cash) uniquement", "score": 0 },
+        { "id": "dig_2_opt_2", "label": "Paiement par transfert Mobile Money simple (numéro perso)", "score": 40 },
+        { "id": "dig_2_opt_3", "label": "Paiement digital Marchand intégré (QR Code, Code Marchand MoMo/Moov/Celtiis, lien)", "score": 80 },
+        { "id": "dig_2_opt_4", "label": "Paiement multi-canaux automatisé (Terminal POS, Passerelle de paiement web)", "score": 100 }
+      ]
+    },
+
+    {
+      "id": "ops_1",
+      "dimensionId": "operations",
+      "type": "boolean",
+      "label": "Votre entreprise dispose-t-elle de procédures écrites permettant à l'équipe de maintenir les ventes et la production pendant un mois en votre absence ?",
+      "context": "Mesure d'autonomie organisationnelle face au risque d'absence du dirigeant.",
+      "options": [
+        { "id": "ops_1_no", "label": "Non", "score": 0 },
+        { "id": "ops_1_yes", "label": "Oui", "score": 100 }
+      ]
+    },
+    {
+      "id": "ops_2",
+      "dimensionId": "operations",
+      "type": "single_choice",
+      "label": "Comment évaluez-vous votre niveau de dépendance vis-à-vis de vos fournisseurs clés ?",
+      "context": "Sécurisation des approvisionnements et gestion des risques de rupture.",
+      "options": [
+        { "id": "ops_2_opt_1", "label": "Niveau 1 : Dépendance totale (Un seul fournisseur, aucun contrat)", "score": 0 },
+        { "id": "ops_2_opt_2", "label": "Niveau 2 : Dépendance modérée (Fournisseur principal + secours informels)", "score": 40 },
+        { "id": "ops_2_opt_3", "label": "Niveau 3 : Approvisionnement sécurisé (Plusieurs fournisseurs comparés)", "score": 75 },
+        { "id": "ops_2_opt_4", "label": "Niveau 4 : Chaîne maîtrisée (Fournisseurs sous contrat + stock tampon géré)", "score": 100 }
+      ]
+    },
+
+    {
+      "id": "finan_1",
+      "dimensionId": "financement",
+      "type": "single_choice",
+      "label": "Quel est le niveau d'enregistrement officiel de votre entreprise auprès des services de l'État (ex: GUFE, APIM) ?",
+      "context": "Degré de formalisation légale et administrative de l'entreprise.",
+      "options": [
+        { "id": "finan_1_opt_1", "label": "Structure informelle (Non enregistrée)", "score": 0 },
+        { "id": "finan_1_opt_2", "label": "Enregistrée (RCCM et IFU obtenus), mais obligations non à jour", "score": 50 },
+        { "id": "finan_1_opt_3", "label": "Formalisée, à jour et disposant d'états financiers certifiés (SYSCOHADA)", "score": 100 }
+      ]
+    },
+    {
+      "id": "finan_2",
+      "dimensionId": "financement",
+      "type": "numeric",
+      "label": "Combien de mois consécutifs de relevés (bancaires ou compte Mobile Money Marchand) êtes-vous en mesure de fournir à un partenaire financier ?",
+      "context": "Capacité à fournir des preuves tangibles d'historique financier.",
+      "placeholder": "Entrez le nombre de mois (ex: 6)",
+      "scoringRule": {
+        "ranges": [
+          { "min": 0, "max": 0, "score": 0 },
+          { "min": 1, "max": 5, "score": 30 },
+          { "min": 6, "max": 11, "score": 65 },
+          { "min": 12, "max": 999, "score": 100 }
+        ]
+      }
+    },
+    {
+      "id": "finan_3",
+      "dimensionId": "financement",
+      "type": "multiple_choice",
+      "label": "Parmi les éléments suivants, lesquels avez-vous formalisés par écrit pour soutenir votre besoin de financement ?",
+      "context": "Cochez toutes les cases qui s'appliquent (Plafond à 100 points).",
+      "maxScore": 100,
+      "options": [
+        { "id": "finan_3_opt_none", "label": "Aucun document écrit rédigé", "score": 0, "isExclusive": true },
+        { "id": "finan_3_opt_devis", "label": "Devis chiffré des équipements ou besoins en fonds de roulement", "score": 30 },
+        { "id": "finan_3_opt_bp", "label": "Plan d'affaires / Business Plan documenté", "score": 35 },
+        { "id": "finan_3_opt_budget", "label": "Budget prévisionnel de trésorerie sur 12 mois", "score": 35 }
+      ]
+    }
+  ]
+}

@@ -12,7 +12,7 @@
             class="h-7 w-auto sm:h-9 object-contain transition-transform group-hover:scale-105"
           />
           <span class="font-bold text-base sm:text-lg tracking-tight text-alodo-black">
-            <span class="text-alodo-primary font-normal">ALODO</span>MPME
+            <span class="text-alodo-primary font-normal">ALODO</span> MPME
           </span>
         </NuxtLink>
 
